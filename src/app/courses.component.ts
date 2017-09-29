@@ -15,7 +15,7 @@ import { Component } from '@angular/core';
 export class CoursesComponent {
     title = " List of courses";
     courses;
-                // dependency injection .. need to include into providers in app module
+                // class dependency injection .. need to include into providers in app module
     constructor(service: CoursesService) {
         this.courses = service.getCourses();
     }
