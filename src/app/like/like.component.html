@@ -1,0 +1,9 @@
+<!-- change icon to pink if icon is active -->
+<span 
+  class="glyphicon glyphicon-heart"
+  [class.highlighted]="isActive"
+  (click)="onClick()"
+></span>
+
+<!-- display total numbers of likes -->
+<span>{{ likesCount }}</span>

@@ -1,3 +1,5 @@
-<input type="text" [(ngModel)]="title" >
-<favorite></favorite>
-<br> {{ title | titleCase }}
+<!-- <favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChange()"></favorite> -->
+<like
+    [likesCount]="tweet.likesCount"
+    [isActive]="tweet.isLiked"
+></like>
