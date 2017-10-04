@@ -19,3 +19,7 @@ export class FavoriteComponent {
 export interface FavoriteChangedEventArgs {
   newValue: boolean
 }
+
+
+// use in app.component.html to display
+// <favorite[isFavorite]="post.isFavorite" (change)="onFavoriteChange()" > </favorite>
