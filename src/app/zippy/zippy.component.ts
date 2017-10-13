@@ -13,3 +13,8 @@ export class ZippyComponent {
     this.isExpanded = !this.isExpanded;
   }
 }
+
+
+// <zippy title="Shipping Details" > --> apply to app.component.html
+//   Shipping Details Content
+// < /zippy>
