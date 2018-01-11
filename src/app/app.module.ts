@@ -20,6 +20,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { PostsComponent } from './posts/posts.component';
+import { PostService } from './services/post.service';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { PostsComponent } from './posts/posts.component';
     HttpModule
   ], // services go in providers
   providers: [ 
+    PostService,
     CoursesService,
     AuthorsService
   ],
