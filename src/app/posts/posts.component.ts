@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { log } from 'util';
 import { PostService } from '../services/post.service';
 
 @Component({
@@ -36,9 +35,14 @@ export class PostsComponent implements OnInit {
           post['id'] = response.json().id;
           this.posts.splice(0, 0, post);
         }, 
-        error => {
-          alert('An unexpected error occurred.');
-          console.log(error); 
+        (error: Response) => {
+          if (error.status === 400) {
+            // this.form.setErrors(error.json());
+          }
+          else {
+            alert('An unexpected error occurred.');
+            console.log(error);
+          }    
         });
   }
 
@@ -61,9 +65,13 @@ export class PostsComponent implements OnInit {
           let index = this.posts.indexOf(post);
           this.posts.splice(index, 1);
         }, 
-        error => {
-          alert('An unexpected error occurred.');
-          console.log(error);
+        (error: Response) => {
+          if (error.status === 404)
+          alert('This post has already been deleted.');
+          else {
+            alert('An unexpected error occurred.');
+            console.log(error);
+          }        
         });
   }
 
