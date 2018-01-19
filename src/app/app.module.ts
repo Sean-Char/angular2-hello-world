@@ -1,3 +1,4 @@
+import { GithubFollowersService } from './github-followers.service';
 import { HttpModule } from '@angular/http';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { SummaryPipe } from './summary.pipe';
@@ -53,6 +54,7 @@ import { GithubFollowersComponent } from './github-followers/github-followers.co
     PostService,
     CoursesService,
     AuthorsService,
+    GithubFollowersService,
     { provide: ErrorHandler, useClass: AppErrorHandler }
   ],
   bootstrap: [AppComponent]
